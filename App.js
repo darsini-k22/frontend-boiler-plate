@@ -2,6 +2,9 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home'
+import ConfirmSeedPhrase from './Pages/ConfirmSeedPhrase';
+import SeedPhrase from './Pages/SeedPhrase';
+
 
 const Stack = createStackNavigator();
 
@@ -17,6 +20,8 @@ const CypherStack = () => {
           headerStyle: { backgroundColor: 'gold' },
         })}
       />
+      <Stack.Screen name="SeedPhrase" component={SeedPhrase}></Stack.Screen>
+      <Stack.Screen name="ConfirmSeedPhrase" component={ConfirmSeedPhrase}></Stack.Screen>
     </Stack.Navigator>
   )
 }
@@ -24,7 +29,7 @@ const CypherStack = () => {
 export default function App() {
   return (
     <NavigationContainer>
-      <CypherStack/>
+      <CypherStack/> 
     </NavigationContainer>
   );
 }
